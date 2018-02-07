@@ -40,3 +40,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#
+# NOTE: above ^^^ is all default Rails 5.0.6 gems and config
+#
+
+gem "slim-rails"

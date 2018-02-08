@@ -26,27 +26,39 @@
 //
 // NEAT COLS
 //
-.col-12 {
+.col-1 {
   @include grid-column(1);
 }
 
-.col-6 {
+.col-2 {
   @include grid-column(2);
 }
 
-.col-4 {
+.col-3 {
   @include grid-column(3);
 }
 
-.col-3 {
+.col-4 {
   @include grid-column(4);
 }
 
-.col-2 {
+.col-6 {
   @include grid-column(6);
 }
 
-.col-1 {
+.col-8 {
+  @include grid-column(8);
+}
+
+.col-10 {
+  @include grid-column(10);
+}
+
+.col-11 {
+  @include grid-column(10);
+}
+
+.col-12 {
   @include grid-column(12);
 }
 
@@ -89,4 +101,12 @@
       }
     }
   }
+}
+
+
+//
+// Main content
+//
+.main {
+  padding: 5px 30px;
 }

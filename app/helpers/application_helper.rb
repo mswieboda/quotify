@@ -21,4 +21,12 @@ module ApplicationHelper
     markdown = Redcarpet::Markdown.new(renderer, extensions)
     markdown.render(text).html_safe
   end
+
+  def date_format(date)
+    if date.year < 0
+      date.strftime("%m/%d") + ", " + date.year.abs.to_s + " BC"
+    else
+      date.strftime("%m/%d/%Y")
+    end
+  end
 end

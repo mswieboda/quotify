@@ -1,6 +1,6 @@
 .grid-container
   - @quotes.each do |quote|
-    = link_to(quotes_path(quote))
+    = link_to(quote)
       .col-3
         = quote.text
 

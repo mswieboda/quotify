@@ -1,22 +1,23 @@
 p#notice = notice
 
-p
-  strong Name:
+h3
   = @author.name
-p
-  strong Fictional:
+- if @author.fictional
+  p
+    strong Fictional:
   p
     = @author.fictional ? "Yes" : "No"
-p
-  strong Birth:
+- if @author.birth
   p
-    = @author.birth
-p
-  strong Death:
+    strong Birth:
   p
-    = @author.death
+    = date_format(@author.birth)
+- if @author.death
+  p
+    strong Death:
+  p
+    = date_format(@author.death)
 p
-  strong Bio:
   = markdown(@author.bio)
 
 => link_to 'Edit', edit_author_path(@author)

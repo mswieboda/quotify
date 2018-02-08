@@ -1,0 +1,16 @@
+h2
+  = @quote.text
+p
+  strong
+    | -
+    - if @quote.author
+      = @quote.author.name
+      = @quote.author.character ? " (" + @quote.author.character + ")" : nil
+    - else
+      | Anonymous
+  - if @quote.originated
+    = " (originated: " + @quote.originated + ")"
+
+
+p
+  = markdown(@quote.origin)

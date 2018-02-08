@@ -45,7 +45,7 @@ Quote.create(
   id: 1,
   author_id: 1,
   text: "I am not bothered by the fact that I am not understood. I am bothered when I do not know others.",
-  year: "circa 475 BC",
+  originated: "circa 475 BC",
   origin:
   %Q{
 ### The Analects
@@ -82,11 +82,32 @@ Quote.create(
   id: 3,
   author_id: 2,
   text: "It's only after we've lost everything that we're free to do anything.",
-  year: "1996, book, 1999 movie",
-  # date: Date.new(1996, 8, 17),
+  originated: "1996, book, 1999 movie",
   origin:
   %Q{
 Common theme and tone of Fight Club book and movie, of facing "rock bottom".
 
 Appears in the section of the book while Tyler is teaching the Narrarator how he makes and sells soap.}
 )
+
+Quote.create(
+  id: 4,
+  author_id: 2,
+  text: "I say never be complete, I say stop being perfect, I say let... lets evolve, let the chips fall where they may.",
+  originated: "1996, book, 1999 movie",
+  origin:
+  "In the book and movie, Tyler says this to the Narrator while sharing beers before the Narrator iconically hits Tyler in the face for the first time, and stays at his dilapidated house on Paper Street."
+)
+
+
+Quote.create(
+  id: 5,
+  author_id: 1,
+  text: "Choose a job you love, and you will never have to work a day in your life.",
+  origin:
+  %Q{
+Read more here:
+Wikiquote: [Confucius](https://en.wikiquote.org/wiki/Confucius)
+Wikipedia: [The Analects](https://en.wikipedia.org/wiki/The_Analects)}
+)
+

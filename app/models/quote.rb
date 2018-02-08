@@ -3,5 +3,5 @@ class Quote < ApplicationRecord
   # NOTE: attributes information
   # :origin - text - converted from Markdown to HTML
 
-  belongs_to :author
+  belongs_to :author, optional: true
 end

@@ -2,15 +2,27 @@ p#notice = notice
 
 p
   strong Text:
+p
   = @quote.text
 p
+  strong By:
+p
+  - if @quote.author
+    = @quote.author.name
+    = @quote.author.character ? " (" + @quote.author.character + ")" : nil
+  - else
+    | Anonymous
+p
   strong Year:
+p
   = @quote.year
 p
   strong Date:
+p
   = @quote.date
 p
   strong Origin:
+p
   = markdown(@quote.origin)
 
 => link_to 'Edit', edit_quote_path(@quote)

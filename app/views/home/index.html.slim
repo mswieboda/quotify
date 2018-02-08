@@ -1,15 +1,18 @@
-h5 Random quote:
+h5 A Quote From The Archives:
 .quote
   = @quote.text
-div
-  | (NYI) - Author
-.author
-  / = @author.name
-div Time originated:
-.year
+- if @author
+  = "- " + @author.name
+  = @author.character ? " (" + @author.character + ")" : nil
+- else
+  | - Anonymous
+br
+br
+- if @quote.year
+  div Originated:
   = @quote.year
-.date
   = @quote.date
-div Origin:
-.origin
+  br
+  br
+p
   = markdown(@quote.origin)

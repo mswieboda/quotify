@@ -7,15 +7,22 @@ html
     = stylesheet_link_tag('application', media: 'all')
 
   body
-    .grid-container
-      .col-6
-        .quotify-link
-          = link_to("Quotify", '/')
-      .col-6
-        = link_to("Quotes", quotes_path)
-      .col-6 Authors
-      .col-6 Users
-      .col-6 Search
+    .top-nav
+      = link_to('/') do
+        .item.quotify-link Quotify
+      end
+      = link_to(quotes_path) do
+        .item Quotes
+      end
+      = link_to(authors_path) do
+        .item Authors
+      end
+      a
+        .item Categories
+      a
+        .item Users
+      a
+        .item Search
 
     hr
 

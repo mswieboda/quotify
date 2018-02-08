@@ -6,6 +6,43 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Author.destroy_all
+
+Author.create(
+  id: 1,
+  name: "Confucius",
+  birth: Date.new(-551, 9, 28),
+  death: Date.new(-479),
+  bio: %Q{
+Confucius was a Chinese teacher, editor, politician, and philosopher
+of the Spring and Autumn period of Chinese history.
+
+Throughout history, Confucius is widely considered as one of the
+most important and influential individuals in affecting the lives
+of humanity. His teaching and philosophy greatly impacted people
+around the world and still linger in today's society.
+
+Source:
+[Confucius - Wikipedia](https://en.wikipedia.org/wiki/Confucius)}
+)
+
+Author.create(
+  id: 2,
+  name: "Tyler Durden",
+  fictional: true,
+  bio: %Q{
+Confucius was a Chinese teacher, editor, politician, and philosopher
+of the Spring and Autumn period of Chinese history.
+
+Throughout history, Confucius is widely considered as one of the
+most important and influential individuals in affecting the lives
+of humanity. His teaching and philosophy greatly impacted people
+around the world and still linger in today's society.
+
+Source:
+[Confucius - Wikipedia](https://en.wikipedia.org/wiki/Confucius)}
+)
+
 Quote.destroy_all
 
 Quote.create(

@@ -1,3 +1,7 @@
 class Quote < ApplicationRecord
-  # :origin - field is converted from Markdown to HTML
+
+  # NOTE: attributes information
+  # :origin - text - converted from Markdown to HTML
+
+  belongs_to :author
 end

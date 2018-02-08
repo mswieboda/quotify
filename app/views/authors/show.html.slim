@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @author.name
+p
+  strong Fictional:
+  p
+    = @author.fictional ? "Yes" : "No"
+p
+  strong Birth:
+  p
+    = @author.birth
+p
+  strong Death:
+  p
+    = @author.death
+p
+  strong Bio:
+  = markdown(@author.bio)
+
+=> link_to 'Edit', edit_author_path(@author)
+'|
+=< link_to 'Back', authors_path

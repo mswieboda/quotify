@@ -50,20 +50,32 @@
   @include grid-column(12);
 }
 
-// Rails CSS reset
-a {
-  text-decoration: none;
+//
+// Top navigation links/menu
+//
+.top-nav {
+  @include grid-container;
 
-  &:hover {
-    color: #00aa66;
-    background-color: #fff;
+  a {
+    // color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
+
+    .item {
+      @include grid-column(2);
+      border-radius: 7px;
+      text-align: center;
+
+      &:hover {
+        background-color: #0099aa;
+      }
+
+      &.quotify-link {
+          font-weight: bold;
+          font-size: 15px;
+      }
+    }
   }
-}
-
-//
-// MORE CSS HELPERS
-//
-.quotify-link {
-  font-weight: bold;
-  font-size: 25px;
 }

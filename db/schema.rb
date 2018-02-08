@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180208002147) do
+ActiveRecord::Schema.define(version: 20180208023235) do
+
+  create_table "authors", force: :cascade do |t|
+    t.string   "name"
+    t.date     "birth"
+    t.date     "death"
+    t.text     "bio"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "fictional",  default: false
+  end
 
   create_table "quotes", force: :cascade do |t|
     t.string   "text"
@@ -19,6 +29,8 @@ ActiveRecord::Schema.define(version: 20180208002147) do
     t.text     "origin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "author_id"
+    t.index ["author_id"], name: "index_quotes_on_author_id"
   end
 
 end

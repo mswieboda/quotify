@@ -28,8 +28,17 @@ Source:
 
 Author.create(
   id: 2,
+  name: "Marc Antony",
+  birth: Date.new(-83, 1, 14),
+  death: Date.new(-30, 8, 1),
+  bio: "Marcus Antonius (Mark Antony) is best known as the Roman general who was a lover of Cleopatra. The two committed suicide after their defeat by Octavian."
+)
+
+Author.create(
+  id: 3,
   name: "Chuck Palahniuk",
   character: "Tyler Durden",
+  birth: Date.new(1962, 2, 21),
   fictional: true,
   bio: %Q{
 Tyler is the charismatic and vicious leader of Fight Club
@@ -37,6 +46,15 @@ who eventually starts Project Mayhem.
 
 He is a character of Chuck Palahniuk's making in the book,
 Fight Club. And 1999 movie of the same name, played by Brad Pitt.}
+)
+
+Author.create(
+  id: 4,
+  name: "Matthew Broderick",
+  character: "Ferris Bueller",
+  birth: Date.new(1962, 3, 21),
+  fictional: true,
+  bio: "A slight comic actor chiefly known for his boyish charm, Matthew Broderick was born in New York City, to Patricia Broderick (née Biow), a playwright and painter, and James Broderick, an actor. His father had Irish and English ancestry, and his mother was from a Jewish family (from Germany and Poland)"
 )
 
 Quote.destroy_all
@@ -59,7 +77,6 @@ Or from Wikipedia: [The Analects](https://en.wikipedia.org/wiki/The_Analects)}
 
 Quote.create(
   id: 2,
-  # author_id: 2,
   text: "It only takes a discovery, or mistake to transform the unknown into historical existance.",
   origin:
   %Q{
@@ -80,7 +97,7 @@ Until Next Time,
 
 Quote.create(
   id: 3,
-  author_id: 2,
+  author_id: 3,
   text: "It's only after we've lost everything that we're free to do anything.",
   originated: "1996, book, 1999 movie",
   origin:
@@ -92,7 +109,7 @@ Appears in the section of the book while Tyler is teaching the Narrarator how he
 
 Quote.create(
   id: 4,
-  author_id: 2,
+  author_id: 3,
   text: "I say never be complete, I say stop being perfect, I say let... lets evolve, let the chips fall where they may.",
   originated: "1996, book, 1999 movie",
   origin:
@@ -111,3 +128,38 @@ Wikiquote: [Confucius](https://en.wikiquote.org/wiki/Confucius)
 Wikipedia: [The Analects](https://en.wikipedia.org/wiki/The_Analects)}
 )
 
+Quote.create(
+  id: 6,
+  author_id: 1,
+  text: "To know what you know and what you do not know, that is true knowledge.",
+  origin:
+  %Q{
+Read more here:
+Wikiquote: [Confucius](https://en.wikiquote.org/wiki/Confucius)
+Wikipedia: [The Analects](https://en.wikipedia.org/wiki/The_Analects)}
+)
+
+Quote.create(
+  id: 7,
+  author_id: 1,
+  text: "Real knowledge is to know the extent of one's ignorance.",
+  origin:
+  %Q{
+Read more here:
+Wikiquote: [Confucius](https://en.wikiquote.org/wiki/Confucius)
+Wikipedia: [The Analects](https://en.wikipedia.org/wiki/The_Analects)}
+)
+
+Quote.create(
+  id: 8,
+  author_id: 2,
+  text: "I am dying, Egypt, dying.",
+  origin: "Mark Antony speaks these words to Cleopatra, Queen of Egypt, as he lies dying in her arms in this historic-tragedy that sweeps across the world from Rome to the East."
+)
+
+Quote.create(
+  id: 9,
+  author_id: 4,
+  text: "Life moves pretty fast. If you don't stop and look around once in a while, you could miss it.",
+  origin: "From the Chicagoland-based comedy instant classic \"Ferris Bueller's Day Off\"."
+)

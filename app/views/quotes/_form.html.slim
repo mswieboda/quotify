@@ -1,0 +1,21 @@
+= form_for @quote do |f|
+  - if @quote.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@quote.errors.count, "error")} prohibited this quote from being saved:"
+      ul
+        - @quote.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :text
+    = f.text_field :text
+  .field
+    = f.label :year
+    = f.text_field :year
+  .field
+    = f.label :date
+    = f.date_select :date
+  .field
+    = f.label :origin
+    = f.text_area :origin
+  .actions = f.submit

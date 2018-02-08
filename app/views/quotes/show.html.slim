@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Text:
+  = @quote.text
+p
+  strong Year:
+  = @quote.year
+p
+  strong Date:
+  = @quote.date
+p
+  strong Origin:
+  = markdown(@quote.origin)
+
+=> link_to 'Edit', edit_quote_path(@quote)
+'|
+=< link_to 'Back', quotes_path

@@ -44,7 +44,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #
 # NOTE: above ^^^ is all default Rails 5.0.6 gems and config
 #
-
-gem "slim-rails"
+gem 'pry-rails', group: [:development, :test]
+gem 'slim-rails'
 gem 'normalize-rails'
-gem "neat"
+gem 'neat'
+gem 'redcarpet', '~> 3.4.0'

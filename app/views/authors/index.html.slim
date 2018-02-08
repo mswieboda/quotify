@@ -1,7 +1,7 @@
-.grid-container
+.authors.grid-container
   - @authors.each do |author|
     = link_to(author)
-      .col-3
+      .author-list-item.col-4
         = author.name
         - if author.character
           = " (" + author.character + ")"

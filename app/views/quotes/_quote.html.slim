@@ -11,6 +11,20 @@ p
   - if @quote.originated
     = " (originated: " + @quote.originated + ")"
 
-
 p
   = markdown(@quote.origin)
+
+br
+br
+
+p Search quote via:
+
+.grid-container
+  .col-1
+    = link_to('Google', "https://www.google.com/search?q=#{@quote.text} #{@quote.author ? "by " + @quote.author.name : ''}", target: "_blank")
+  .col-1
+    = link_to('YouTube', "https://www.youtube.com/results?q=#{@quote.text} #{@quote.author ? "by " + @quote.author.name : ''}", target: "_blank")
+  .col-1
+    = link_to('Twitter', "https://www.twitter.com/search?q=#{@quote.text} #{@quote.author ? "by " + @quote.author.name : ''}", target: "_blank")
+  .col-1
+    = link_to('Reddit', "https://www.reddit.com/search?q=#{@quote.text} #{@quote.author ? "by " + @quote.author.name : ''}", target: "_blank")

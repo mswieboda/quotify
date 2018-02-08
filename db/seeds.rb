@@ -57,6 +57,31 @@ Author.create(
   bio: "A slight comic actor chiefly known for his boyish charm, Matthew Broderick was born in New York City, to Patricia Broderick (née Biow), a playwright and painter, and James Broderick, an actor. His father had Irish and English ancestry, and his mother was from a Jewish family (from Germany and Poland)"
 )
 
+Author.create(
+  id: 5,
+  name: "Genghis Khan"
+)
+
+Author.create(
+  id: 6,
+  name: "Michael Jordan"
+)
+
+Author.create(
+  id: 7,
+  name: "Donald Trump"
+)
+
+Author.create(
+  id: 8,
+  name: "Abraham Lincoln"
+)
+
+Author.create(
+  id: 9,
+  name: "Dalai Lama"
+)
+
 Quote.destroy_all
 
 Quote.create(
@@ -162,4 +187,10 @@ Quote.create(
   author_id: 4,
   text: "Life moves pretty fast. If you don't stop and look around once in a while, you could miss it.",
   origin: "From the Chicagoland-based comedy instant classic \"Ferris Bueller's Day Off\"."
+)
+
+Quote.create(
+  id: 10,
+  author_id: 9,
+  text: "With realization of one's own potential and self-confidence in one's ability, one can build a better world."
 )

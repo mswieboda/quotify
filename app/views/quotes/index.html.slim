@@ -1,7 +1,7 @@
-.grid-container
+.quotes.grid-container
   - @quotes.each do |quote|
     = link_to(quote)
-      .col-3
+      .quote-list-item.col-3
         = quote.text
 
 br

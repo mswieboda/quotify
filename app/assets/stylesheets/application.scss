@@ -10,6 +10,46 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require normalize-rails
  *= require_self
+ *= require_tree .
  */
+@import "neat";
+
+//
+// NEAT GRID
+//
+.grid-container {
+  @include grid-container;
+}
+
+//
+// NEAT COLS
+//
+.col-12 {
+  @include grid-column(1);
+}
+
+.col-6 {
+  @include grid-column(2);
+}
+
+.col-4 {
+  @include grid-column(3);
+}
+
+.col-3 {
+  @include grid-column(4);
+}
+
+.col-2 {
+  @include grid-column(6);
+}
+
+.col-1 {
+  @include grid-column(12);
+}
+
+//
+// MORE CSS HELPERS
+//

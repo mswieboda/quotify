@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title Quotify
+    = csrf_meta_tags
+
+    = stylesheet_link_tag('application', media: 'all')
+
+  body
+    .grid-container
+      .col-6
+        .quotify-link
+          = link_to("Quotify", '/')
+      .col-6
+        = link_to("Quotes", quotes_path)
+      .col-6 Authors
+      .col-6 Users
+      .col-6 Search
+
+    hr
+
+    = yield

@@ -1,13 +1,15 @@
-h1 Quotify
-
-.grid-container
-  .col-4
-    = link_to("Quotes", quotes_path)
-  .col-4 Authors
-  .col-4 Users
-  .col-4 Search
-
-hr
-
-.quote Try to be a rainbow in someone's cloud.
-.author Maya Angelou
+h5 Random quote:
+.quote
+  = @quote.text
+div
+  | (NYI) - Author
+.author
+  / = @author.name
+div Time originated:
+.year
+  = @quote.year
+.date
+  = @quote.date
+div Origin:
+.origin
+  = markdown(@quote.origin)

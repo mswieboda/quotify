@@ -11,8 +11,8 @@
  * It is generally better to create a new file per style scope.
  *
  *= require normalize-rails
- *= require_self
  *= require_tree .
+ *= require_self
  */
 @import "neat";
 
@@ -50,6 +50,20 @@
   @include grid-column(12);
 }
 
+// Rails CSS reset
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: #00aa66;
+    background-color: #fff;
+  }
+}
+
 //
 // MORE CSS HELPERS
 //
+.quotify-link {
+  font-weight: bold;
+  font-size: 25px;
+}
